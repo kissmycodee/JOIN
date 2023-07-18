@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <link rel="icon" type="icon" href="assets/img/logo_light.png">
+    <script src="mini_backend/mini_backend.js"></script>
+    <script src="js/signup.js"></script>
+    <title>JOIN | Sign up</title>
+</head>
+<body onload="init()">
+    <section>
+        <header>
+        <div class="headerLeft">
+            <img src="assets/img/Logo_dark.png" alt="">
+        </div>
+     </header>
+        <div class="Background">  
+            <div class="signUpFrame">
+                <a href="index.html"><img class="arrow" src="assets/img/arrow-left-line.svg" alt=""></a>
+                <div class="signUpContent">
+                        <p  class="signUpHeader">Sign up</p>
+                        <img class="headerImg" src="assets/img/login_underline.png" alt="">
+                    <form class="login" onsubmit="addUser(); return false;">
+                    <div class="loginInput">
+                        <div class="input">
+                            <input required type="text" placeholder="Name" id="inputName">
+                            <img src="assets/img/icon-user-grey.svg" alt="">
+                        </div>
+                        <div class="input">
+                            <input required type="email" placeholder="Email" id="inputEmail">
+                            <img src="assets/img/email_input.svg" alt="">
+                        </div>
+                        <div class="input">
+                            <input required minlength="5" type="password" placeholder="Password" id="inputPassword">
+                            <img src="assets/img/password_input.svg" alt="">
+                        </div>    
+                        <div class="btn">
+                            <button class="signUpBtn button">Sign Up</button>
+                        </div>
+                    </form>
+                </div>             
+            </div>
+        </div>
+    </section>
+</body>
+</html>

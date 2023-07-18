@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="./assets/templates/Navbar.js"></script>
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="summary.css">
+    <link rel="icon" type="icon" href="assets/img/logo_light.png">
+
+    <script src="mini_backend/mini_backend.js"></script>
+    <script src="js/summary.js"></script>
+
+    <title>JOIN | Summary</title>
+    
+</head>
+
+
+<body onload="includeHTML(); init()">
+    <div w3-include-html="assets/templates/Navbar.html"></div>
+    <section class="summary">
+        <div class="summaryHead">
+            <span class="sectionHeadline">Summary</span>
+            <div class="separator"></div>
+            <div class="slogan">Everything in a nutshell!</div>
+        </div>
+
+        <div class="summaryBody" id="summaryContent">
+            <div class="summaryContent">
+
+                <div class="tasksHead">
+                    <div class="task" onclick="goToBoard()">
+                        <span class="taskAmount" id="taskAmountBoard">0</span>
+                        <span class="taskDescription">Tasks in Board</span>
+                    </div>
+                    <div class="task" onclick="goToBoard()">
+                        <span class="taskAmount" id="taskAmountinProgress">0</span>
+                        <span class="taskDescription">Tasks in Progress</span>
+                    </div>
+                    <div class="task" onclick="goToBoard()">
+                        <span class="taskAmount" id="taskAmountawaitingFeedback">0</span>
+                        <span class="taskDescription">Awaiting Feedback</span>
+                    </div>
+                </div>
+                <div class="taskTarget" onclick="goToBoard()">
+                    <div class="urgentTasks">
+                        <img src="assets/img/urgent-color.svg" alt="">
+                        <div class="urgentTasksChild">
+                            <span class="urgentTasksAmount" id="urgentTasksAmount">0</span>
+                            <span class="urgentTasksName">Urgent</span>
+                        </div>
+                    </div>
+                    <div class="line">
+                    </div>
+                    <div class="urgentTasksDate">
+                        <span class="tasksDeadlineDate" id="tasksDeadlineDate">Oktober 16, 2022</span>
+                        <span class="tasksDeadline">Upcoming Deadline</span>
+                    </div>
+                </div>
+                <div class="taskBottom">
+                    <div class="taskToDoAndDone" onclick="goToBoard()">
+                        <div class="taskToDoAndDoneIcon"><img src="assets/img/summary-pencil.svg"></div>
+                        <div class="taskToDoChild">
+                            <span class="taskAmount" id="taskAmounttoDo">0</span>
+                            <span class="taskDescription">To Do</span>
+                        </div>
+                    </div>
+                    <div class="taskToDoAndDone" onclick="goToBoard()">
+                        <div class="taskToDoAndDoneIcon"><img src="assets/img/summary-done.svg"></div>
+                        <div class="taskToDoChild">
+                            <span class="taskAmount" id="taskAmountdone">0</span>
+                            <span class="taskDescription">Done</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="welcomeName" id="welcomeName">
+            </div>
+
+        </div>
+    </section>
+
+
+
+</body>
+
+
+</html>

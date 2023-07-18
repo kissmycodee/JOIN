@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOIN - PopUpContainer_modModus</title>
+    
+    <script src="/js/popUpContainer_modModus.js"></script>
+    <link rel="stylesheet" type="text/css" href="popUpContainer_modModus.css">
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+
+</head>
+<body>
+    
+
+    <div class="popUpBackground">
+        <div id="popUpContainer" class="PopUpContainer">
+            <img onclick="slideOut(); renderPopUpContainer()" class="xicon" src="assets/img/icon-x.svg" alt="">
+    
+            <div class="PopUpMM_Interior">
+                <div class="PopUpModModus_Head">
+                
+                    <div class="PopUpMM_title">Title</div>
+                    <input id="PopUpMM_title" placeholder="Enter a title">
+                    
+                    <div class="PopUpMM_Description">Description</div>
+                    <textarea id="PopUpMM_Description_textarea" placeholder="Enter a description"></textarea>
+                    
+                </div>
+    
+                <div class="PopUpModModus_Body">
+                    
+                        <div class="PopUpMM_DueDate_1">Due Date</div>
+                        <input type="date" id="PopUpMM_dueDate">
+                                            
+                        <div class="PopUpMM_Priority">Priority</div>
+                        <div class="PopUpMM_Priority_Labels">
+                            
+                            <button onclick="priorityRed()" id="PopUpMM_Priority_Labels_red" class="PopUpMM_Priority_Labels_white">Urgent<img id="urgent_img" src="assets/img/prio-urgent.svg"></button>
+                            <button onclick="priorityYellow()" id="PopUpMM_Priority_Labels_yellow" class="PopUpMM_Priority_Labels_white">Medium<img id="medium_img" src="assets/img/prio-medium.svg"></button>
+                            <button onclick="priorityGreen()" id="PopUpMM_Priority_Labels_green" class="PopUpMM_Priority_Labels_white">Low<img id="low_img" src="assets/img/prio-low.svg"></button>
+                        </div>      
+                </div>
+    
+                <div class="PopUpModModus_Bottom">
+                    <div class="PopUpMM_Assign_title">Assigned to</div>
+                    <select>
+                        <option>Select contacts to assign</option>
+                        <option>David Eisenberg</option>
+                        <option>empty_no Array</option>
+                    </select>
+                    
+                </div>
+    
+                <div>
+                    <button class="editbtn"><img src="assets/img/pencil-no-bg.svg" alt=""></button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+</body>
+</html>

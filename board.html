@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOIN | Board</title>
+    <script src="./mini_backend/mini_backend.js"></script>
+    <script src="./assets/templates/Navbar.js"></script>
+    <script src="js/board.js"></script>
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="board.css">
+    <link rel="stylesheet" type="text/css" href="popUpContainer_modModus.css">
+    <link rel="stylesheet" href="contact_bg_colors.css">
+    <link rel="icon" type="icon" href="assets/img/logo_light.png">
+    
+</head>
+<body onload="includeHTML(), init()"> 
+    <div w3-include-html="assets/templates/Navbar.html"></div>
+   
+    <div class="boxMajor">
+        
+        <div class="workSpace">
+            <div class="boardHead">
+                <div class="toolsTop">
+                    <div class="paragraph"><p>Board</p></div>
+                    <div class="boardSearch">
+                        <div class="searchField">
+                            <input placeholder="Find Task" type="text" id="searchTask" onkeyup="search()">
+                            <button class="searchButton"><img src="assets/img/icon-magnifying-glass.svg"></button>
+                        </div>
+                        <a href="add_task.html" class="boardSearchLink">Add task
+                            <src="assets/img/icon-add-plus_white.svg">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="boardBottom_dragNdropArea">
+                <div id="dragNdrop_1_toDo" class="dragNdrop_1_toDo">
+                    <div class="toolsBottom">
+                        <p>To do</p>
+                        <a href="add_task.html"><img src="assets/img/plus button v1.png"></a>
+                    </div>
+                    <div id="TASKS_todo" class="TASKS_todo" ondrop="moveTo('TASKS_todo')" ondragover="allowDrop(event); highlight('TASKS_todo')" ondragleave="removeHighlight('TASKS_todo')">    <!--ondrop="moveTo('TASKS_todo')" als Parameter geben wir die ID des Ziel-div-containers ein, des jweiligen Abwurffelds/ Drop Area. Dieser wird dann ondrop automatisch an die function moveto() mitübergeben -->
+                        <div onclick="slideIn()" class="postIt" id="openPopUpContainer">
+                            <div class="postItInterior">
+                                <div class="postIt_Head">
+                                    <div class="postIt_Labels">Design</div>
+                                    <div class="postIT_Headline">Webdesign redesign</div>
+                                    <div class="postIt_Task">Modify the contents of the main website...</div>
+                                </div>
+                                <div class="postIt_Body">
+                                    <div class="postIt_ProgressBar"><img src="assets/img/Frame 141.png"></div>
+                                    <div class="postIt_StatusAccomplished"><img src="assets/img/frame_2 Done.png"></div>
+                                </div>
+                                <div class="postIt_Bottom">
+                                    <div class="postIt_Staff"><div class="contact-initials_1"></div><div class="contact-initials_2"></div><div class="contact-initials_3"></div><img src="assets/img/Frame 112.png"></div>
+                                    <div class="postIt_PriorityClass"><img src="assets/img/Frame 111.png"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="dragNdrop_2_InProgress" class="dragNdrop_2_InProgress">
+                    <div class="toolsBottom">
+                        <p>In progress</p>
+                        <a href="add_task.html"><img src="assets/img/plus button v1.png"></a>
+                    </div>
+                    <div id="TASKS_inProgress" class="TASKS_inProgress" ondrop="moveTo(`TASKS_inProgress`)" ondragover="allowDrop(event); highlight('TASKS_inProgress')" ondragleave="removeHighlight('TASKS_inProgress')">
+
+                    </div>
+
+              
+                </div>
+                <div class="dragNdrop_3_AwaitingFeedback">
+                    <div class="toolsBottom">
+                        <p>Awaiting Feedback</p> 
+                        <a href="add_task.html"><img src="assets/img/plus button v1.png"></a>
+                    </div>
+                    <div id="TASKS_awaitingFeedback" class="TASKS_awaitingFeedback" ondrop="moveTo('TASKS_awaitingFeedback')" ondragover="allowDrop(event); highlight('TASKS_awaitingFeedback')" ondragleave="removeHighlight('TASKS_awaitingFeedback')">
+
+                    </div>
+                
+                </div>
+                <div class="dragNdrop_4_Done">
+                    <div class="toolsBottom">
+                        <p>Done</p>
+                        <a href="add_task.html"><img src="assets/img/plus button v1.png"></a>
+                    </div>
+                    <div id="TASKS_done" class="TASKS_done" ondrop="moveTo('TASKS_done')" ondragover="allowDrop(event); highlight('TASKS_done')" ondragleave="removeHighlight('TASKS_done')">
+
+                    </div>
+                    
+            </div>
+        </div>
+        
+
+    </div>
+
+    <div id="popUpBackground" class="popUpBackground">
+        <div id="popUpContainer" class="PopUpContainer">
+            <img onclick="slideOut()" id="closePopUpContainer" class="xicon" src="assets/img/icon-x.svg" alt="">
+    
+            <div class="PopUpInterior">
+                <div class="PopUp_Head">
+                    <div class="PopUp_Labels" id="LabelColor">${tasks['labels']}</div>
+                    <div class="PopUp_Headline">${tasks['titles']}</div>
+                    <div class="PopUp_Task">${tasks['descriptions']}</div>
+                    
+                </div>
+                <div class="PopUp_Body">
+                    <div class="PopUp_Body_top">
+                        <div class="PopUp_DueDate_1">Due Date:</div>
+                        <div class="PopUp_DueDate_2">${tasks['dueDate']}</div>
+                    </div>
+                    <div class="PopUp_Body_mid">
+                        <div class="PopUp_Priority">Priority:</div>
+                        <div class="PopUp_Priority_Label PopUp_${tasks['prio']}"></div>
+                    </div>
+                    <div class="PopUp_Body_sub">
+                        <div class="PopUp_Assign_title">Assigned to:</div>
+                        
+                    </div>
+                </div>
+                <div class="PopUp_Bottom">
+                    <div class="PopUp_Assign_people">
+                        <div class="PopUp_Assign_people_logo">XY-Z</div>
+                        <div class="PopUp_Assign_people_names">${tasks['assignedto']}</div>
+                    </div>
+                </div>
+    
+                <div>
+                    <button onclick="renderPopUpContainer_modModus('${i}')" class="editbtn"><img src="assets/img/pencil-no-bg.svg" alt=""></button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+</body>
+</html>

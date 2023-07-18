@@ -1,0 +1,74 @@
+*{
+    font-family: 'Inter';
+    font-style: normal;
+}
+
+
+.impressum {
+    height: calc(100vh - 139px);
+    padding-top: 50px;
+    padding-left: 50px;
+    margin-left: 232px;
+    background: #F6F7F8;
+}
+
+.impressum h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 61px;
+    line-height: 120%;
+    color: #000000;
+}
+
+.arrow a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height:40px;
+    position: absolute;
+    right: 16.67%;
+    top: 17.59%;
+    border: none;
+    background: none;
+    text-decoration: none;
+
+}
+
+.arrow img {
+    transition: 200ms;
+}
+
+.arrow img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.helpContent {
+    width: 976px;
+}
+
+.explainJoin span {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.explainHeader {
+    font-weight: 700;
+    font-size: 27px;
+}
+
+.guidanceHeader {
+    font-weight: 700;
+    font-size: 27px;
+}
+
+.firstDash {
+    font-weight: 700;
+    font-size: 27px;
+}
+
+.secondDash {
+    font-weight: 400;
+    font-size: 16px;
+}

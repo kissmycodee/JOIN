@@ -1,0 +1,544 @@
+*{
+    margin: 0;
+    font-family: 'Inter';
+    font-style: normal;
+    }
+
+.dnone {
+    display: none;
+}
+
+.Background {
+    background-color: #F5F5F5;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerLeft {
+    position: fixed;
+    left: 5.35%;
+    right: 87.71%;
+    top: 7.81%;
+    bottom: 80.28%;
+}
+
+.headerRight {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 35px;
+    
+    position: absolute;
+    width: 287px;
+    height: 51px;
+    right: 10%;
+    top: 67px;
+}
+
+.headerRight p{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    /* or 25px */
+    color: #000000;
+}
+
+.signUpButton {
+    padding: 4px 16px;
+    gap: 10px;
+
+    width: 91px;
+    height: 51px;
+
+    background: #2A3647;
+    border-radius: 8px;
+    border: none;
+
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    line-height: 120%;
+    /* or 19px */
+    
+    color: #FFFFFF;
+    transition: 200ms;
+}
+
+.loginFrame {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 35px 0px; */
+    gap: 35px;
+    position: absolute;
+    width: 652px;
+    height: 513px;
+
+/* white */
+
+    background: #FFFFFF;
+/* shadoe backlog box */
+
+    box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.04);
+    border-radius: 30px;
+}
+
+.loginHeader {
+    font-weight: 700;
+    font-size: 61px;
+    line-height: 120%;
+    /* or 73px */
+    
+    text-align: center;
+    color: #000000;
+}
+
+
+.loginHeader p {
+    margin: 0;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+
+.loginInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    width: 422px;
+}
+
+.input {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    /* Auto layout */
+    padding: 13px 21px;
+    background: #FFFFFF;
+    /* Style */
+    border: 1px solid #D1D1D1;
+    border-radius: 10px;
+   /* or 25px */    
+   
+}
+
+.input input {
+    border: none;
+    outline: none;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+}
+
+.input span {
+    display: flex;
+    justify-content: center;
+}
+
+.rememberMe {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    
+}
+
+.rememberMe a{
+    text-decoration: none;
+}
+
+.checkbox {
+    display: flex;
+    gap: 10px;
+}
+
+.checkbox input {
+    /* Boton gradient */
+    background: linear-gradient(180deg, #F9F9F9 0%, #F0F0F0 100%);
+    border: 1px solid #000000;
+    border-radius: 3px;
+    width: 16px;
+    height: 16px;
+}
+
+.checkbox p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    /* or 19px */
+    color: #000000;
+}
+
+.forgot {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    /* or 19px */
+
+    /* Ligth blue */
+    color: #29ABE2;
+}
+
+
+
+.btn {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.loginButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 0px;
+    gap: 10px;
+
+    width: 145px;
+    height: 51px;
+
+    background: #2A3647;
+    border-radius: 8px;
+    border: none;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 120%;
+    /* or 25px */
+    color: #FFFFFF;
+    transition: 200ms;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: #29ABE2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.button:active{
+    background: #FFFFFF;
+    /* stronger */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: black;
+}
+
+.guestLoginButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 0px;
+    gap: 10px;
+
+    width: 145px;
+    height: 51px;
+
+    background: #fff;
+    border-radius: 8px;
+    border: solid 1px #2A3647;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 120%;
+    /* or 25px */
+    color: #2A3647;
+    transition: 200ms;
+}
+
+.borderButton:hover {
+    cursor: pointer;
+    color: #29ABE2;
+    border-color: #29ABE2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.borderButton:active {
+    cursor: pointer;
+    color: #091931;
+    border-color: #091931;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+/* .msgBoxFrame{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    top: 0;
+} */
+.msgBox {
+    position: fixed;
+    bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 415px;
+    height: 74px;
+
+    /* Version 2/ main color */
+
+    background: #2A3647;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    font-size: 23px;
+    line-height: 120%;
+    /* identical to box height, or 28px */
+
+
+    color: #FFFFFF;
+}
+
+#eyeIMG {
+    cursor: pointer;
+    display: none;
+}
+
+.shake{
+    border: 1px solid red;
+    position: relative;
+    animation: shake 0.2s;
+}
+
+@keyframes shake {
+	0%,100%{
+		left: 0px;
+	}
+	20%,80%{
+		left: -15px;
+	}
+	40%,60%{
+		left: 15px;
+	}
+}
+
+.dnone {
+    display: none !important;
+}
+
+.fadeout{
+    animation: fade-out 750ms ease-in-out;
+}
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+.startBackground {
+    height: 100vh;
+    width: 100%;
+    background-color: #f5f5f5;
+    position: absolute;
+    opacity: 0;
+    animation: fadeBackground 1500ms ease-in-out;
+    animation-direction: normal;
+    z-index: -10;
+}
+
+.logoAnimation {
+    animation: slideLogo 1000ms ease-in-out;
+    animation-direction: normal;
+    z-index: 15;
+}
+
+@keyframes slideLogo {
+    0% {
+        top: calc(50% - 101px);
+        left: calc(50% - 122px);
+        transform: translate(-50%, -50%);
+        transform: scale(2);
+    }
+    20% {
+        top: calc(50% - 101px);
+        left: calc(50% - 122px);
+        transform: translate(-50%, -50%);
+        transform: scale(2);
+    }
+    100% {
+        top: 7.81%;
+        left: 5.35%;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeBackground {
+    0% {
+        opacity: 100%;
+        z-index: 10;
+    }
+    50% {
+        opacity: 100%;
+    }
+    99% {
+        opacity: 0%;
+        z-index: 10;
+    }
+    100% {
+        z-index: -1;
+    }
+}
+
+@media (max-width: 1050px) {
+    .headerLeft {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        width: 60px;
+        height: auto;
+    }
+
+    .headerLeft img {
+        width: 60px;
+    }
+
+    .signUpButton {
+        width: 91px !important;
+    }
+
+    .login {
+        gap: 15px;
+    }
+
+    .loginFrame {
+        width: 500px;
+        height: 350px; 
+        gap: 10px;
+    }
+
+    .loginHeader {
+        font-size: 47px;
+    }
+
+    .loginInput {
+        width: 327px;
+        gap: 15px;
+    }
+
+    .input {
+        padding: 0 21px 0 21px;
+        width: 327px;
+        height: 41px;
+    }
+
+    .rememberMe {
+        gap: 20px;
+    }
+
+    .button {
+        width: 145px;
+    }
+
+    .borderButton {
+        width: 145px;
+    }
+    
+}
+
+@media (max-width: 800px) {
+    
+    .headerLeft {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        width: 60px;
+        height: auto;
+    }
+
+    .headerLeft img {
+        width: 60px;
+    }
+
+    @keyframes slideLogo {
+        0% {
+            width: 60px;
+            top: calc(50% - 30px);
+            left: calc(50% - 36.5px);
+            transform: translate(-50%, -50%);
+        }
+        20% {
+            width: 60px;
+            top: calc(50% - 30px);
+            left: calc(50% - 36.5px);
+            transform: translate(-50%, -50%);
+        }
+        100% {
+            width: 60px;
+            top: 15px;
+            left: 15px;
+            height: auto;
+        }
+    }
+
+    .headerRight{
+        position: absolute;
+        width: 287px;
+        height: 51px;
+        left: calc(50% - 143.5px);
+        top: 90%;
+    }
+
+    .signUpButton {
+        width: 91px !important;
+    }
+
+    .loginFrame {
+        width: 372px;
+        height: 573px; 
+        gap: 15px;
+    }
+
+    .loginHeader {
+        font-size: 47px;
+    }
+
+    .loginInput {
+        width: 327px;
+        height: 151px;
+    }
+
+    .input {
+        padding: 0 21px 0 21px;
+        width: 327px;
+        height: 41px;
+    }
+
+    .rememberMe {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .btn {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button {
+        width: 180px;
+    }
+
+    .borderButton {
+        width: 180px;
+    }
+
+}

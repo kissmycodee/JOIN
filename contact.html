@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="assets/templates/Navbar.js"></script>
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="contact_bg_colors.css">
+    <link rel="stylesheet" href="contact_popup.css">
+    <link rel="stylesheet" href="contact_edit.css">
+    <link rel="icon" type="icon" href="assets/img/logo_light.png">
+
+    <!-- <script src="script.js"></script> -->
+    <script src="mini_backend/mini_backend.js"></script>
+    <script src="contact.js"></script>
+
+    <title>JOIN | Contacts</title>
+    
+</head>
+<body onload="includeHTML(), init()">
+    <div w3-include-html="assets/templates/Navbar.html"></div>
+    <div class="main">
+        
+        <div class="main-contact">
+            <div class="contact-bar" id="contactbar">
+                <div class="contact-bar-scroll">
+                    <div class="contact-list" id="contact-list">
+                        <!-- contact.js generate list with contacts -->     
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-selectionn" id="contact-selectionn">
+                <!-- contact.js generate only one contact if press in list -->
+            </div>
+            
+
+            <div class="contact-content">
+                <div class="contact-header">
+                    <span class="contact-header-name">Contacts</span>
+                    <div class="contact-line"></div>
+                    <span class="contact-header-description">Better with a team</span>
+                </div>
+
+                
+
+                <div class="contact-selection" id="contact-selection">
+                    <!-- contact.js generate only one contact if press in list -->
+                </div> 
+                 
+                   
+
+                
+
+            </div>
+            <div class="succesfulC" id="succesfulC" >Contact succesfully created </div>
+
+                <button class="button" id="openBtn" onclick="slideIn()">New contact
+                    <img src="assets/img/icons-add-contact.svg" alt="">
+                </button>
+                <button class="buttonn" id="openBtnn" onclick="slideIn()">New contact
+                    <img src="assets/img/icons-add-contact.svg" alt="">
+                </button>
+
+
+
+
+
+        </div>
+        
+        
+    </div>
+     
+   
+    <div class="popUpBackgroundE" id="popupedit">
+             <!--render popupedit -->
+    </div>
+
+    <!-- popup save -->
+    <div class="popUpBackground" id="popup">
+        <div class="popUpContact" id="mainPopUp">
+            <div class="popUpLeft">
+                <img class="logoimg" src="assets/img/logo_light.png" alt="">
+                <div class="popUpLeftText">
+                    <p class="popUpLeftHeader">Add Contact</p>
+                    <p class="popUpLeftSubline">Tasks are better with a team!</p>
+                </div>
+                <img src="assets/img/Vector 5 (1).png" alt="">
+             </div>
+            <div class="popUpRight">
+                <img class="xicon" id="closeBtn" onclick="slideOut()" src="assets/img/icon-x.svg" alt="">
+                <div class="popUpRightImg">
+                    <div class="popUpRightImgBG">
+                        <img src="assets/img/icon-user.svg" alt="">
+                    </div>                    
+                </div>
+                <form onsubmit=" return false" class="popUpAddContact">
+                    <div class="input">
+                        <input  type="text" placeholder="Name" id="contact-popup-name">
+                        <img src="assets/img/icon-user-grey.svg" alt="">
+                    </div>
+                    <div class="input">
+                        <input  type="email" placeholder="Email" id="contact-popup-email">
+                        <img src="assets/img/email_input.svg" alt="">
+                    </div>
+                    <div class="input">
+                        <input  type="number" placeholder="Phone" id="contact-popup-phone">
+                        <img src="assets/img/icon-phone.svg" alt="">
+                    </div>
+                    <div class="popUpButton">
+                        <button class="cancelBtn borderButton" onclick=" slideOut()">Cancel
+                            <img src="assets/img/icons-cancel.svg" alt="">
+                        </button>
+                        <button class="createBtn" onclick="addNewContact(), slideOut()">Create Contact
+                            <img src="assets/img/icon-check-dark.svg" alt="">
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

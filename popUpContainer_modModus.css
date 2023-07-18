@@ -1,0 +1,870 @@
+body {
+    margin: 0;
+}
+
+.PopUpMMContainer{
+    position: relative;
+    display: flex;    
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+    gap: 25px;
+    isolation: isolate;
+
+    width: 500px;
+    height: 724px;
+
+    background: #FFFFFF;
+
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+}
+
+.xicon {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    right: 5%;
+    top: 5%;
+    transition: 200ms;
+}
+
+.xicon:hover {
+    cursor: pointer;
+    transform: rotate(135deg);
+}
+
+.PopUpModModus_Head{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.PopUpModModus_Body{
+    display:flex;
+    flex-direction: column;
+}
+
+.PopUpModModus_Bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding-top: 10px; */
+
+}
+
+.PopUpMM_Interior{
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    padding-left: 17px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.PopUpMM_title{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+    color: #000000;
+    margin-bottom: 5px;
+
+}
+
+.PopUpModModus_Head input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 13px 21px;
+    gap: 10px;
+
+    width: 422px;
+    height: 51px;
+
+    background: #FFFFFF;
+    /* Style */
+
+    border: 1px solid #D1D1D1;
+    border-radius: 10px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+    color: #000000;
+    margin-bottom: 10px;
+
+}
+
+.PopUpModModus_Head input:focus {
+    outline: none;
+}
+
+.PopUpMM_Description{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+.PopUpModModus_Head textarea {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 18px 21px;
+    gap: 10px;
+    isolation: isolate;
+
+    width: 422px;
+    height: 119px;
+
+    background: #FFFFFF;
+    border: 1px solid #D1D1D1;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    resize: none;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+    color: #000000;
+}
+
+.PopUpModModus_Head textarea:focus{
+    outline: none;
+}
+
+.PopUpMM_DueDate_1{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+.PopUpModModus_Body input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 21px;
+    padding-right: 21px;
+    gap: 10px;
+    isolation: isolate;
+    
+    width: 422px;
+    height: 51px;
+    
+    background: #FFFFFF;
+    
+    border: 1px solid #D1D1D1;
+    border-radius: 10px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.PopUpModModus_Body input:focus {
+    outline: none;
+}
+
+.PopUpModModus_Body input[type="date"]::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background: url(assets/img/icon-date-picker.svg) no-repeat;
+    width: 20px;
+    height: 20px;
+    border-width: thin;
+  }
+
+.PopUpMM_Priority{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+     color: #000000;
+     margin-bottom: 5px;
+}
+
+.PopUpMM_Priority_Labels{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 25px;
+    gap: 10px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.PopUpMM_Priority_Labels button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 10px;
+    gap: 10px;
+    /* background-color: #FFFFFF; */
+    min-width: 130px;
+    height: 51px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border: none;
+    margin-top: 15px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+}
+
+.PopUpMM_Priority_Labels button:hover{
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* .PopUpMM_Priority_Labels button:active img{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: #091931;
+    background: #FFFFFF;
+} */
+
+/* .PopUpMM_Priority_Labels button:active img {
+    filter: invert(6%) sepia(33%) saturate(4369%) hue-rotate(204deg) brightness(94%) contrast(95%);
+} */
+
+.PopUpModModus_Bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.PopUpMM_assignedTo {
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.PopUpMM_Assign_title{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+.PopUpMM_drop-down-box {
+    width: 130%;
+    border: 1px solid #D1D1D1;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+    outline: none;
+    font-weight: 400;
+    font-size: 21px;
+    font-family: 'Inter';
+    text-indent: 15px;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 1px;
+}
+
+.PopUpModModus_Bottom select {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+    color: #000000;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 21px;
+    padding-right: 21px;
+    gap: 10px;
+    isolation: isolate;
+
+    width: 467px;
+    height: 51px;
+
+    background: #FFFFFF;
+    border-radius: 10px;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    background: url(assets/img/icon-dropdown.svg);
+    background-position: 98% center;
+    background-repeat: no-repeat;
+    outline: none;
+}
+
+.PopUpMM_input-new-category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-top: 11.5px;
+    padding-bottom: 11.5px;
+    overflow-y: scroll;
+}
+.PopUpMM_input-new-category span {
+    margin: 0;
+    width: 90%;
+}
+
+.PopUpMM_input-new-category::-webkit-scrollbar {
+    width: 6px;
+}
+
+.PopUpMM_input-new-category::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.PopUpMM_input-new-category::-webkit-scrollbar-thumb {
+    background: #A8A8A8;
+    border-radius: 10px;
+}
+
+.PopUpMM_input-new-category img {
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+}
+
+.all-contacts {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    max-height: 50px;
+    background-color: white;
+    margin-top: -5px;
+    height: 58px;
+    justify-content: start;
+    overflow-y: auto;
+}
+
+.all-contacts::-webkit-scrollbar {
+    width: 6px;
+}
+
+.all-contacts::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.all-contacts::-webkit-scrollbar-thumb {
+    background: #A8A8A8;
+    border-radius: 10px;
+}
+
+.padding-bottom {
+    padding-bottom: 5px;
+}
+
+.display-flex {
+    display: flex !important;
+}
+
+.PopUpMM_subtask-required {
+    display: none;
+    color: red;
+    margin: 0 0 0 16px;
+    font-size: 11px;
+}
+
+.PopUpMM_chosen-contacts{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    color: white;
+    font-family: 'Inter';
+    width: 310px;
+    padding: 10px
+}
+
+.PopUpMM_chosencontacts{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+    width: 42px;
+    height: 42px;
+    /* background: #FFFFFF; */
+    border-radius: 45px;
+    box-sizing: border-box;
+    width: 42px;
+    height: 42px;
+    left: 0px;
+    top: 0px;
+    /* background: #FF7A00; */
+    /* border: 1px solid #FFFFFF; */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+    font-family: 'Inter';
+}
+
+.container-contacts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.contact-checkbox {
+    margin-right: 15px;
+}
+
+.editbtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 6px;
+
+    position: absolute;
+    width: 57px;
+    height: 57px;
+    right: 7%;
+    bottom: 5%;
+
+    /* Version 2/ main color */
+
+    background: #2A3647;
+    border-radius: 10px;
+    border: none;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 10;
+    flex-grow: 0;
+    z-index: 10;
+}
+
+.editbtn img {
+    filter: invert(100%) sepia(3%) saturate(1%) hue-rotate(23deg) brightness(106%) contrast(100%);
+}
+
+.editbtn:hover {
+    cursor: pointer;
+    background-color: #29ABE2;
+}
+
+.editbtn:hover img {
+    filter: invert(100%) sepia(3%) saturate(1%) hue-rotate(23deg) brightness(106%) contrast(100%);
+}
+
+.editbtn:active {
+    background-color: #091931;
+}
+
+.editbtn:active img {
+    filter: invert(100%) sepia(3%) saturate(1%) hue-rotate(23deg) brightness(106%) contrast(100%);
+}
+
+.d-none {
+    display:none;
+}
+
+.d-on{
+    display: flex;
+}
+
+.PopUpMM_Priority_Labels_white {
+    background-color: white;
+}
+
+.PopUpMM_Priority_Labels_red {
+    background-color: #ff3d00;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+    color: white;
+}
+
+.PopUpMM_Priority_Labels_yellow {
+    background-color: #ffa800;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: white;
+}
+
+.PopUpMM_Priority_Labels_green {
+    background-color: #7ae229;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: white;
+}
+
+
+/* -- BackGrounds --*/
+
+.bg-white {
+    background-color: white;
+}
+
+.bg-red {
+    background-color: #FF3D00;
+    border: none;
+    color: white;
+}
+
+.bg-orange {
+    background-color: #FFA800;
+    border: none;
+    color: white;
+}
+
+.bg-green {
+    background-color: #7AE229;
+    border: none;
+    color: white;
+}
+
+.become-white {
+    filter: brightness(0) invert(1);
+}
+
+@media (min-width: 546px) and (max-width: 600px) {
+
+
+    /* -- PopUpContainer -- */
+
+    .popUpBackground {
+        width: 100%;
+
+    }
+
+    .PopUpMMContainer{
+        width: 90%;
+        height: 70%;
+    }
+
+    .PopUpModModus_Head {
+        width: 100%;
+    }
+
+    .PopUpModModus_Head input {
+        width: 85%;
+    
+    }
+
+    .PopUpModModus_Head textarea {
+        width: 85%;
+
+    }
+
+    .PopUpModModus_Body{
+        width: 100%;
+    }
+
+    .PopUpModModus_Body input {
+        width: 85%;
+ 
+    }
+
+}
+
+@media (min-width: 514px) and (max-width: 545px) {
+
+
+    /* -- PopUpContainer -- */
+
+    .popUpBackground {
+        width: 100%;
+
+    }
+
+    .PopUpMMContainer{
+        width: 90%;
+        height: 75%;
+      
+    }
+
+    .xicon {
+        top: 3%;
+    }
+
+    .PopUpModModus_Head {
+        width: 100%;
+    }
+
+    .PopUpModModus_Head input {
+        width: 85%;
+    
+    }
+
+    .PopUpModModus_Head textarea {
+        width: 85%;
+
+    }
+
+    .PopUpModModus_Body{
+        width: 100%;
+    }
+
+    .PopUpModModus_Body input {
+        width: 85%;
+ 
+    }
+
+    .PopUpMM_Priority_Labels{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .PopUpModModus_Bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 85%;
+    }
+
+    .PopUpMM_assignedTo {
+        gap: 5px;
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+    }
+
+    /* .PopUpMM_drop-down-box {
+        width: 130%;
+        border: 1px solid #D1D1D1;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 4px;
+        outline: none;
+        font-weight: 400;
+        font-size: 21px;
+        font-family: 'Inter';
+        text-indent: 15px;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 1px;
+    }
+
+    .PopUpMM_input-new-category {
+
+    }
+
+    .PopUpMM_input-new-category span{
+        
+    }
+
+    .PopUpMM_chosen-contacts{
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        color: white;
+        font-family: 'Inter';
+        width: 310px;
+        padding: 10px
+    } */
+
+}
+
+
+@media (min-width: 375px) and (max-width: 513px) {
+
+
+    /* -- PopUpContainer -- */
+
+    .popUpBackground {
+        width: 100%;
+
+    }
+
+    .PopUpMMContainer{
+        width: 90%;
+        height: 75%;
+      
+    }
+
+    .xicon {
+        top: 3%;
+    }
+
+    .PopUpModModus_Head {
+        width: 100%;
+    }
+
+    .PopUpModModus_Head input {
+        width: 85%;
+    
+    }
+
+    .PopUpModModus_Head textarea {
+        width: 85%;
+
+    }
+
+    .PopUpModModus_Body{
+        width: 100%;
+    }
+
+    .PopUpModModus_Body input {
+        width: 85%;
+ 
+    }
+
+    .PopUpMM_Priority_Labels{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+
+    .PopUpModModus_Bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 85%;
+    }
+
+    .PopUpMM_assignedTo {
+        gap: 5px;
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+    }
+
+    /* .PopUpMM_drop-down-box {
+        width: 130%;
+        border: 1px solid #D1D1D1;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 4px;
+        outline: none;
+        font-weight: 400;
+        font-size: 21px;
+        font-family: 'Inter';
+        text-indent: 15px;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 1px;
+    }
+
+    .PopUpMM_input-new-category {
+
+    }
+
+    .PopUpMM_input-new-category span{
+        
+    }
+*/
+    .PopUpMM_chosen-contacts{
+        gap: 2%;
+        max-width: 85%;
+
+    }
+
+    .editbtn {
+        bottom: 2%;
+    }
+
+}
+
+@media (min-width: 350px) and (max-width: 374px) {
+
+
+    /* -- PopUpContainer -- */
+
+    .popUpBackground {
+        width: 100%;
+
+    }
+
+    .PopUpMMContainer{
+        width: 90%;
+        height: 80%;
+      
+    }
+
+    .xicon {
+        top: 3%;
+    }
+
+    .PopUpModModus_Head {
+        width: 100%;
+    }
+
+    .PopUpModModus_Head input {
+        width: 85%;
+    
+    }
+
+    .PopUpModModus_Head textarea {
+        width: 85%;
+
+    }
+
+    .PopUpModModus_Body{
+        width: 100%;
+    }
+
+    .PopUpModModus_Body input {
+        width: 85%;
+ 
+    }
+
+    .PopUpMM_Priority_Labels{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+
+    .PopUpModModus_Bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 85%;
+    }
+
+    .PopUpMM_assignedTo {
+        gap: 5px;
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+    }
+
+    .PopUpMM_chosen-contacts{
+        gap: 2%;
+        max-width: 85%;
+        flex-wrap: wrap;
+    }
+
+    .editbtn {
+        bottom: 2%;
+    }
+
+}

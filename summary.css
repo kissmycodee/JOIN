@@ -1,0 +1,383 @@
+.summary {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 89px - 35px);
+    padding: 89px 60px 35px 292px;
+    background-color: white;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.summary::-webkit-scrollbar {
+    display: none;
+    /* Chrome */
+}
+
+.summaryHead {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 50px 0px;
+    gap: 30px;
+}
+
+.sectionHeadline {
+    font-size: 61px;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.separator {
+    width: 0px;
+    height: 59px;
+    border: 3px solid #29ABE2;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.slogan {
+    width: 400px;
+    height: 32px;
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 120%;
+    color: #2A3647;
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+
+.summaryBody {
+    display: flex;
+    gap: 30px;
+}
+
+.summaryContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 35px;
+}
+
+.tasksHead {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 35px;
+}
+
+.task {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 0px;
+    width: 170px;
+    background: white;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+}
+
+.task:hover {
+    background: #2A3647;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: white;
+    cursor: pointer;
+}
+
+.task:active {
+    background: #FFFFFF;
+    color: #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.taskAmount {
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 120%;
+}
+
+.taskDescription {
+    width: 87px;
+    height: 50px;
+    /* Version 2/t6 */
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+    /* or 25px */
+    text-align: center;
+}
+
+.taskTarget {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 61px;
+    width: 580px;
+    height: 150px;
+    background: white;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    text-align: center;
+}
+
+.taskTarget:hover {
+    background: #2A3647;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: white;
+    cursor: pointer;
+}
+
+.taskTarget:active {
+    background: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: black;
+}
+
+.urgentTasks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 18px;
+}
+
+.urgentTasksChild {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+}
+
+.urgentTasksAmount {
+    font-weight: 600;
+    font-size: 47px;
+    line-height: 120%;
+}
+
+.urgentTasksName {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+}
+
+.taskTarget .line {
+    height: 102px;
+    border: 2px solid #D1D1D1;
+}
+
+.urgentTasksDate {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.tasksDeadlineDate {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 120%;
+}
+
+.tasksDeadline {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+}
+
+.taskBottom {
+    display: flex;
+    gap: 35px;
+}
+
+.taskToDoAndDone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    width: 272.5px;
+    height: 150px;
+    background: white;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+}
+
+.taskToDoAndDoneIcon {
+    width: 69px;
+    height: 69px;
+    background-color: #2A3647;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.taskToDoChild {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.taskToDoAndDone:hover {
+    background: #2A3647;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.taskToDoAndDone:hover .taskToDoAndDoneIcon {
+    background-color: white;
+}
+
+.taskToDoAndDone:hover .taskToDoAndDoneIcon img {
+    filter: invert(1);
+}
+
+.taskToDoAndDone:active {
+    background: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    color: #000000;
+}
+
+.welcomeName {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+}
+
+.phrase {
+    font-size: 47px;
+    line-height: 120%;
+    color: #2A3647;
+}
+
+.welcomeUsername {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 120%;
+    color: #29ABE2;
+}
+
+@media (max-width:1350px) {
+    .welcomeName {
+        display: none;
+    }
+}
+
+@media (max-width: 930px) {
+    .slogan {
+        width: 230px;
+        height: unset;
+        white-space: break-spaces;
+    }
+    .summary {
+        align-items: center;
+    }
+    .summaryHead {
+        width: unset;
+    }
+}
+
+@media (max-width: 850px) {
+    body {
+        background-color: #f6f7f8;
+        display: flex;
+        justify-content: center;
+    }
+    .summary {
+        padding: 79px 0px 24px;
+        width: 100%;
+        height: calc(100vh - 79px - 80px - 24px);
+    }
+    .summaryHead {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 0 20px 20px;
+        gap: 20px;
+    }
+    .sectionHeadline {
+        order: 1;
+    }
+    .separator {
+        order: 3;
+        transform: rotate(90deg);
+        height: 90px;
+        margin-left: 45px;
+        margin-top: -45px;
+        margin-bottom: -45px;
+    }
+    .slogan {
+        order: 2;
+        white-space: unset;
+        width: unset;
+    }
+}
+
+@media(max-width:600px) {
+    .summary {
+        width: 100%;
+    }
+    .summaryHead {
+        width: 96%;
+    }
+    .summaryBody {
+        width: 95%;
+        padding: 0 2.5%;
+    }
+    .summaryContent {
+        width: 100%;
+    }
+    .tasksHead {
+        width: 100%;
+        gap: 2%;
+    }
+    .task {
+        width: 32%;
+        padding: 10px 0px;
+    }
+    .taskAmount {
+        font-size: 47px;
+    }
+    .taskDescription {
+        font-size: 16px;
+        height: unset;
+    }
+    .taskTarget {
+        width: 100%;
+        height: 115px;
+        gap: 20px;
+    }
+    .urgentTasks img {
+        width: 40px;
+        height: 40px;
+    }
+    .line {
+        height: 68px !important;
+    }
+    .taskBottom {
+        width: 100%;
+        gap: 2%;
+    }
+    .taskToDoAndDone {
+        width: 49%;
+        height: 115px;
+        gap: unset;
+    }
+    .taskToDoAndDoneIcon {
+        width: 40px;
+        height: 40px;
+    }
+    .taskToDoAndDoneIcon img {
+        width: 25px;
+        height: 25px;
+    }
+}

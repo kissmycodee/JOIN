@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="assets/templates/Navbar.js"></script>
+    <script src="mini_backend/mini_backend.js"></script>
+    <script src="add_task.js"></script>
+    <link rel="stylesheet" href="add_task.css" />
+    <link rel="stylesheet" href="assets/fonts/fonts.css" />
+    <link rel="stylesheet" href="contact_bg_colors.css">
+    <link rel="icon" type="icon" href="assets/img/logo_light.png">
+    <title>JOIN | Add Task</title>
+  </head>
+  <body onload="initAddTaskPage(); includeHTML(); ">
+    <div w3-include-html="assets/templates/Navbar.html"></div>
+
+    <div class="maintask">
+    
+        <form onsubmit="addNewTask(); return false;">
+            <div class="task-site">
+                <div class="add-task-container">
+                    <div class="add-task-header">
+                        <span class="add-task-headline">Add Task</span>
+                    </div>
+
+                    <div class="add-task-box">
+                        <div class="left-container" >
+                            <div class="title-content">
+                                <span class="add-task-span">Title</span>
+                                <input required id="input-title" class="add-task-input " type="text" placeholder="Enter a title" oninvalid="this.setCustomValidity('This field is required')">
+                            </div>
+                            <div class="description-content">
+                                <span class="add-task-span">Description</span>
+                                <textarea required id="input-description" class="add-task-placeholder" placeholder="Enter a Description"></textarea>
+                            </div>
+                            <div class="add-category-list" id="div-add-category">
+                                <span class="add-task-span">Category</span>
+                                <div id="drop-down-box1" class="drop-down-box bg-white">
+                                    <div onclick="showCategorys()" class="input-new-category">
+                                        <span id="select-category" >Select task category</span>
+                                        <img class="arrow-down" src="assets/img/icon-dropdown.svg">
+                                    </div>
+                                    <div class="all-categorys" id="all-categorys">
+                                    </div>
+                                </div>
+                                <div class="colors-new-category" id="colors-new-category"></div>
+                                    <span class="text-category-required" id="text-category-required">Please choose a category</span>
+                                    <span class="text-category-required" id="text-category-required-name" style="margin-top: 4px;">Please choose a category name and a color</span>
+                                </div>
+                            <div class="assignedTo">
+                                <span class="add-task-span">Assigned to</span>
+                                <div id="drop-down-box" class="drop-down-box bg-white">
+                                    <div onclick="showContacts()" class="input-new-category">
+                                        <span>Select contacts to assign</span>
+                                        <img class="arrow-down" src="assets/img/icon-dropdown.svg">
+                                    </div>
+                                    <div class="all-contacts" id="all-contacts"></div>
+                                </div>
+                                <span class="subtask-required" id="contact-required">Please choose at least one contact</span>
+                                <div class="chosen-contacts" id="chosen-contacts">
+                                    
+                                    <!-- render checked contacts under selectoption -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-container">
+                            <div class="date-content" id="div-date">
+                                <span class="add-task-span">Due date</span>
+                                <input id="input-date-add-task" class="add-task-input-date" type="date" required min="${year}-${month}-${day}" placeholder="dd/mm/yyyy" lang="en-US">
+                            </div>
+                            <!-- priocontainer new -->
+                            <div class="container-prio">
+                                <span class="add-task-span">Prio</span>
+                                <div class="add-task-prio-container">
+                                    <div class="add-task-prio-box bg-white" id="PopUpMM_Priority_Labels_red" onclick="priorityRed()">
+                                        <span>Urgent</span>
+                                        <img id="urgent_img" src="assets/img/prio-urgent.svg">
+                                    </div>
+                                    <div class="add-task-prio-box bg-white" id="PopUpMM_Priority_Labels_yellow" onclick="priorityYellow()">
+                                        <span>Medium</span>
+                                        <img id="medium_img" src="assets/img/prio-medium.svg">
+                                    </div>
+                                    <div class="add-task-prio-box bg-white" id="PopUpMM_Priority_Labels_green" onclick="priorityGreen()">
+                                        <span>Low</span>
+                                        <img id="low_img" src="assets/img/prio-low.svg">
+                                    </div>
+                                </div>
+                                <span class="text-prio-required" id="prio-required">Please choose the priority of the task</span>
+                            </div>
+                            <!-- priocontainer end -->
+                            <div class="subtask-content">
+                                <span class="add-task-span">Subtasks</span>
+                                <div class="add-task-input div-subtask bg-white" id="subtask-div">
+                                    <input class="input-subtask" type="text" placeholder="Add new subtask"
+                                        onclick="changeSubtaskInput()" >
+                                    <img onclick="changeSubtaskInput()" src="assets/img/icon-add-plus-dark.svg">
+                                </div>
+                                <span class="subtask-required" id="subtask-required">Please fill the subtask</span>
+                                <div class="new-subtask-div" id="new-subtask-div"></div>
+                            </div>
+                            <div class="container-buttons">
+                                <div class="create-task-container">
+                                    <div class="frame-27">       
+                                        <button class="clearBTN border" onclick="cancelNewTask()">Clear<img src="assets/img/icons-cancel.svg" alt=""></button>                
+                                        <button class="createBTN btn">Create Task<img src="assets/img/icon-check-dark.svg" alt=""></button>      
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    
+    <!-- popup added to task fenster -->
+        <div class="added-to-task" id="added-to-task-1" >
+            <p>Task added to board</p>
+            <img style="margin-left: 12px;" src="assets/img/Icon-board.svg">
+        </div>
+    </div>
+    
+  </body>
+</html>

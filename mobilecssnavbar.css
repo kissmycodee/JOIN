@@ -1,0 +1,59 @@
+@media (max-width: 1050px){
+    .navBar{
+        width:100%;
+        flex-direction: row;
+        justify-content: space-between;
+        bottom: 0;
+        top: revert;    
+        height: 80px;
+        z-index: 6;
+        padding-top: 0;
+    
+    }
+    .navCapa{
+        display: none;
+    }
+    .navMenu{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+        width: 100%;
+        margin-top: 0;
+    }
+    .navLegal{
+        display: none;
+    }
+    .navLinks{
+        display: flex;
+        height: 100%;
+    }
+    .navLinks a{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0;
+        height: 100%;
+    }
+    .navLinks:hover {
+        cursor: pointer;
+        background-color:#091931;
+    }
+    .navCapah {
+        display: flex;
+        width: 15%;
+    
+    }
+    .header{
+        padding: 0;
+        height: 80px;
+        position: fixed;
+        width: 100%;
+    }
+
+    .headerKanban{
+        display: none !important;
+    }
+}

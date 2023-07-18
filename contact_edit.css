@@ -1,0 +1,351 @@
+* {
+    margin: 0;
+    font-family: 'Inter';
+    font-style: normal;
+
+}
+
+.popUpBackgroundE {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popUpContactE {
+    width: 1212px;
+    height: 594px;
+
+
+    position: relative;
+}
+
+.popUpLeftE {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 46px;
+    gap: 12px;
+    border-radius: 30px 0 0 30px;
+    isolation: isolate;
+
+    position: absolute;
+    width: 463px;
+    height: 594px;
+    left: 0px;
+    top: 0px;
+
+    background: #2A3647;
+}
+
+.logoimgE {
+    width: 55px;
+    height: 66px;
+    position: absolute;
+    bottom: 61%;
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+    z-index: 3;
+
+}
+.popUpLeftHeaderE {
+    /* Version 2/t1 */
+    font-weight: 700;
+    font-size: 61px;
+    line-height: 120%;
+    /* or 73px */
+    color: #FFFFFF;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    z-index: 0;
+}
+
+.popUpLeftSublineE {
+    /* Version 2/t5 */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 120%;
+    /* or 32px */
+    color: #FFFFFF;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    z-index: 1;
+}
+
+.popUpRightE {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 12px;
+    border-radius: 0 30px 30px 0 ;
+    isolation: isolate;
+
+    position: absolute;
+    width: 749px;
+    height: 594px;
+    right: 0px;
+    top: 0px;
+
+    background: #FFFFFF;
+}
+
+.xiconE {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    right: 5%;
+    top: 5%;
+    transition: 200ms;
+}
+
+.xiconE:hover {
+    cursor: pointer;
+    transform: rotate(135deg);
+}
+
+.popUpRightImgE {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    left: 10%;
+    top: 37%;
+}
+
+.popUpRightImgBGE {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 120px;
+    height: 120px;
+    background: #FFFFFF;
+    border: 3px solid #FFFFFF;
+    box-shadow: 0px 0px 4px rgb(0 0 0 / 10%);
+    border-radius: 70px;
+    font-weight: 500;
+    font-size: 47px;
+    line-height: 120%;
+    color: #FFFFFF;
+    
+}
+
+.popUpRightImgBGE img {
+    width: 41px;
+    height: 54px;
+}
+
+.popUpAddContactE {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 35px;
+
+    position: absolute;
+    height: 271px;
+    width: 422px;
+    right: 10%;
+
+}
+
+.inputE {
+    box-sizing: border-box;
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 422px;
+    height: 51px;
+    padding: 13px 21px;
+    background: #FFFFFF;
+    /* Style */
+    border: 1px solid #D1D1D1;
+    border-radius: 10px;
+   /* or 25px */    
+}
+
+.inputE input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+    color: #171717;
+}
+
+inputE::placeholder{
+    color: #D1D1D1;
+}
+
+inputE::-webkit-outer-spin-button,
+inputE::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+inputE[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+.popUpButtonE {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 25px;
+
+    width: 369px;
+    height: 61px;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.saveBtnE {
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 10px;
+    gap: 10px;
+
+    width: 143px;
+    height: 61px;
+
+    background: #2A3647;
+    border-radius: 10px;
+    border: none;
+
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 120%;
+    /* or 25px */
+    color: #FFFFFF;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    transition: 200ms;
+}
+.deleteBtnE{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 10px;
+    gap: 10px;
+    width: 136px;
+    height: 61px;
+    background-color: #fff;
+    border: 1px solid #2A3647;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+    color: #2A3647;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    transition: 200ms;
+}
+
+.buttonE:hover {
+    cursor: pointer;
+    background-color: #29ABE2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.buttonE:active{
+    background: #FFFFFF;
+    /* stronger */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: black;
+}
+
+.dnoneE {
+    display: none !important;
+}
+
+.slideinE{
+    display: flex ;
+    animation: slide-inE 600ms ease-in-out;
+}
+
+.slideoutE {
+    animation: slide-outE 600ms ease-in-out;
+}
+
+.fadeinE{
+    display: flex ;
+    animation: fade-inE 600ms ease-in-out;
+}
+.fadeoutE{
+    animation: fade-outE 600ms ease-in-out;
+}
+
+
+@keyframes slide-inE {
+	0% {
+		transform: translateX(250%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes slide-outE {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(250%);
+	}
+}
+
+@keyframes fade-inE {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-outE {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+
+
+
+

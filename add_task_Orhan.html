@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./assets/templates/Navbar.js"></script>
+    <script src="./js/add_task.js"></script>
+    <link rel="stylesheet" href="add_task.css" />
+    <link rel="stylesheet" href="assets/fonts/fonts.css" />
+    <link rel="icon" type="icon" href="assets/img/Logo_dark.png">
+    <title>Add Task</title>
+  </head>
+  <body onload="includeHTML()">
+    <div w3-include-html="assets/templates/Navbar.html"></div>
+
+    <div class="main">
+        <form onsubmit="pushTask()">
+            <div class="inner-main">
+                <p>Add Task</p>
+            </div>
+            <div class="frame-38">
+                <p class="title">Title</p>
+                <input id="input_Title" class="entertitle" type="text" placeholder="Enter a title">
+
+                <div class="description">
+                    <div class="description-title">
+                        <p>Description</p>
+                    </div>
+                    <textarea id="textarea_Description" class="frame-17" placeholder="Enter a Description" id=""></textarea>
+                </div>
+
+                <div class="category">
+                    <div class="category-title">
+                        <p>Category</p>
+                    </div>
+                    <div class="frame-72">
+                        <select id="label_input_Select" class="frame-14" id="">
+                            <option onvalue="" disabled selected>Select task category</option>
+                            <option value="Backoffice">Backoffice</option>
+                            <option value="Sales">Sales</option>
+                            <option value="Design">Design</option>
+                            <option value="Media">Media</option>
+                            <option value="Marketing">Marketing</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <div class="category-title">
+                        <p>Assigned to</p>
+                    </div>
+                    <div class="frame-72">
+                        <select id="staff_input_Select" class="frame-14" id="selectCategory">
+                            <option disabled selected>Select contacts to assign</option>
+                            <option>Anton Meyer</option>
+                            <option>Anja Schulz</option>
+                            <option>David Eisenberg</option>
+                            <option>Eva Fischer</option>
+                            <option>Albert Einstein</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="frame-43">
+                <div class="frame-39">
+                    <div class="due-date">
+                        <div class="due-date-title">
+                            <p>Due date</p>
+                        </div>
+                        <input id="dueDate_input_Select" class="date-field" type="date">
+
+                            <!-- <div class="calender-fill">
+                                <img src="assets/img/icon-date-picker.svg" alt="">
+                            </div> -->
+                        </div>
+                    </div>
+
+                    <div class="frame-28">
+                        <div class="prio-title">
+                            <p>Prio</p>
+                        </div>
+
+                        <div class="PopUpMM_Priority_Labels">
+                            <button type="button" onclick="priorityRed()" id="PopUpMM_Priority_Labels_red" class="PopUpMM_Priority_Labels_white">Urgent<img id="urgent_img" src="assets/img/prio-urgent.svg"></button>
+                            <button type="button" onclick="priorityYellow()" id="PopUpMM_Priority_Labels_yellow" class="PopUpMM_Priority_Labels_white">Medium<img id="medium_img" src="assets/img/prio-medium.svg"></button>
+                            <button type="button" onclick="priorityGreen()" id="PopUpMM_Priority_Labels_green" class="PopUpMM_Priority_Labels_white">Low<img id="low_img" src="assets/img/prio-low.svg"></button>
+                        </div>      
+                    </div>
+
+                    <div class="subtasks">
+                        <div class="subtasks-title">
+                            <p>Substasks</p>
+                        </div>
+                            <input id="subtask_input" class="add-new-subtask-field" type="text" placeholder="Add new subtask">
+                            <div class="frame-36">
+                                <img onclick="pushSubtasks()" src="assets/img/icon-add-plus-dark.svg" alt="">
+                            </div>
+
+                            <div class="subtasksCheckbox" id="subtasksCheckbox">
+                                <img src="assets/img/icon-check-empty.svg" alt="">
+                                <p class="check-subtask-title">Subtask 1</p>
+                            </div>
+                            <div id="empty_subtask_text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
+            <!-- Trennung Linie -->
+            <div class="line"></div>
+            <!-- Trennung End -->
+
+
+            <div class="frame-35">
+                <div class="frame-27">
+                    
+                    <button class="clearBTN border">Clear<img src="assets/img/icons-cancel.svg" alt=""></button>
+                                    
+                    <button class="createBTN btn">Create Task<img src="assets/img/icon-check-dark.svg" alt=""></button>
+                    
+                </div>
+            </div>
+        </form>
+    </div>
+      
+    
+  </body>
+</html>
