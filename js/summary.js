@@ -1,4 +1,4 @@
-setURL('https://gruppe-08i.developerakademie.net/smallest_backend_ever');
+setURL('http://join.orhan-kacar.com/smallest_backend_ever');
 
 async function init() {
     await downloadFromServer();
@@ -100,7 +100,7 @@ function renderSummary() {
     let amountTasks = searchAmount("");
     let amountinProgress = searchAmount('inProgress');
     let amountawaitingFeedback = searchAmount('awaitingFeedback');
-    let amounttoDo = searchAmount('todo');
+    let amounttoDo = searchAmount('toDo');
     let amountdone = searchAmount('done');
 
     document.getElementById('taskAmountBoard').innerHTML = `${amountTasks}`;

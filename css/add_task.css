@@ -1,6 +1,7 @@
 body{
     background: #F5F5F5;
 }
+
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
@@ -97,6 +98,7 @@ input:-webkit-autofill {
     padding-bottom: 11.5px;
     overflow-y: scroll;
 }
+
 .input-new-category span {
     margin: 0;
     width: 90%;
@@ -135,6 +137,7 @@ input:-webkit-autofill {
     padding: 15px;
     resize: vertical;
 }
+
 .add-task-placeholder::placeholder{
     color: #D1D1D1;    
 }
@@ -326,6 +329,7 @@ input:-webkit-autofill {
     width: 100%;
     height: 47px;
 }
+
 .span-color{
     color: #D1D1D1 !important;  
 }
@@ -417,9 +421,11 @@ input:-webkit-autofill {
     text-indent: 7.5px;
     
 }
+
 .add-task-input-date :invalid::-webkit-datetime-edit {
     color: #D1D1D1;
 }
+
 .add-task-input-date::-webkit-input-placeholder{
     color: #D1D1D1 !important;
 }
@@ -620,12 +626,6 @@ input:-webkit-autofill {
     border: 2px solid #0D99FF;
 }
 
-.container-buttons {
-    display: flex;
-    justify-content: end;
-    width: 90%;
-}
-
 .text-category-required {
     display: none;
     color: red;
@@ -684,6 +684,8 @@ input:-webkit-autofill {
 .become-white {
     filter: brightness(0) invert(1);
 }
+
+
 /*edti task*/
 
 .edit-task-xmark {
@@ -829,36 +831,27 @@ input:-webkit-autofill {
     bottom: 25%;
 }
 
+
 /* BUTTONS */
-.create-task-container {
+  
+.container-buttons {
     display: flex;
-    flex-direction: column;
     justify-content: flex-end;
-    align-items: center;
-    padding: 0px;
-    gap: 4px;
-    position: absolute;
-    width: 338px;
-    height: 61px;
-    /* left: 984px; */
-    top: 750px;
-    background: #F5F5F5;
-  }
-  
-  .frame-27 {
+    width: 100%;
     position: relative;
+}
+
+.create-task-container{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
+    justify-content: flex-end;
     gap: 25px;
-  
-    width: 338px;
-    height: 61px;
+    width: 100%;
+    position: absolute;
+    margin-top: 150px;
+    margin-right: -50px;
     
-  }
-  
+}
+
   .clearBTN {
     box-sizing: border-box;
   
@@ -922,7 +915,7 @@ input:-webkit-autofill {
   }
   
   
-  .createBTN {
+.createBTN {
    
     display: flex;
     flex-direction: row;
@@ -948,8 +941,7 @@ input:-webkit-autofill {
     order: 1;
     flex-grow: 0;
     transition: 200ms;
-  
-  }
+}
   
   
   .createBTN img {
@@ -1002,10 +994,12 @@ input:-webkit-autofill {
 .display-flex {
     display: flex !important;
 }
+
 .border-line {
     border-left: 1px solid #A8A8A8;
     height: 25px;
 }
+
 .d-block {
     display: block !important;
 }
@@ -1056,6 +1050,7 @@ input:-webkit-autofill {
     height: 10px;
     margin-right: 10px;
 }
+
 .chosen-contacts{
     display: flex;
     flex-direction: row;
@@ -1065,6 +1060,7 @@ input:-webkit-autofill {
     width: 310px;
     padding: 10px
 }
+
 .chosencontacts{
     display: flex;
     flex-direction: row;
@@ -1089,47 +1085,51 @@ input:-webkit-autofill {
     line-height: 120%;
     font-family: 'Inter';
 }
+
 .subcontent{
     display: flex; 
     margin-bottom: 10px;
 }
+
+
+    /* ----- RESPONSIVE DESIGN ----- */
+
+
 @media (max-width: 1050px){
+    
     .maintask{
         padding-left: unset;
         margin-bottom: 180px;
         justify-content: center;
     }
+
     .task-site{
         padding-top: 100px;
     }
-    .create-task-container{
-        right: 0;
-        top: 10px;
-        background: white;
-    }
-    .clearBTN{
-        display: none;
-    }
+
     .headerKanban{
         display: none;
     }
+
     .headerFoto{
         display: none;
     }
-    .frame-27{
-        position: fixed;
-        background: white
-    }
+
 }
+
+
 @media (max-width: 837px){
+    
     .add-task-box{
         flex-direction: column;
     }
+
     .left-container{
         border-right: 0px;
         max-width: 100%;
         width: 100% !important;
     }
+
     .right-container{
         display: flex;
         align-items: center;
@@ -1137,37 +1137,56 @@ input:-webkit-autofill {
         gap: 30px !important;
     
     }
+
     .maintask{
         display: flex;
     }
+
     .add-task-container{
         width: 100%;
         max-width: 100%;
         padding: unset;
     }
+
     .title-content{
         width: 100%;
     }
+
     .add-task-placeholder{
             width: auto;
     }
+
     .drop-down-box{
         width: 100%;
     }
+
     .date-content{
         width: 100%;
     }
+
     .container-prio{
         width: 100%;
     }
+
     .subtask-content{
         width: 100%;
     }
-    .frame-27{
-        position: fixed;
-        background: transparent;
-    }
+
     .headerFoto{
         display: none;
+    }
+
+    .create-task-container{
+        justify-content: space-evenly;
+        margin-top: 0;
+        margin-right: 0;
+    }
+
+    .clearBTN{
+        width: 35%;
+    }
+
+    .createBTN{
+        width: 55%;
     }
 }

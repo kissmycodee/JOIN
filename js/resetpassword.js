@@ -1,4 +1,4 @@
-setURL('https://gruppe-08i.developerakademie.net/smallest_backend_ever');
+setURL('http://join.orhan-kacar.com/smallest_backend_ever');
 
 async function init(){
     await downloadFromServer();
@@ -16,7 +16,7 @@ async function resetPassword() {
             user.password = newPassword.value;
             await backend.setItem('users', JSON.stringify(users));
             resetYourPassword();
-            setTimeout(function(){window.location.href = '/01Join/index.html'} , 3000);
+            setTimeout(function(){window.location.href = '/join/index.html'} , 3000);
         } else {
             passwordNotMatch();
             newPassword.value = '';

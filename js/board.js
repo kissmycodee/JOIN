@@ -6,8 +6,7 @@ let chosenContacts = [];
 
 /* --BackEnd Anbindung-- */
 
-setURL('https://gruppe-08i.developerakademie.net/smallest_backend_ever');
-
+setURL('http://join.orhan-kacar.com/smallest_backend_ever');
 
 async function init() {
     await downloadFromServer();
@@ -108,34 +107,6 @@ function removeHighlight (id) {
 }
 
 
-// /**
-//  * This function shows only one empty task container
-//  * @param {number} n - This is the position, where container should be shown
-//  */
-// function highlightDrop(n){
-//     let taskIds = ['toDo','inProgress','awaitingFeedback','done'];
-//     if(tasks[currentDraggedElement]['taskStatus'] == taskIds[n]){
-//     } else {
-//         taskIds.splice(n,1);
-//         for (let i = 0; i < taskIds.length; i++) {
-//             let id = taskIds[i];
-//             document.getElementById(`onDragTask${id}`).classList.add('dNone');
-//         }
-//     }
-// }
-
-
-// /**
-//  * This function is used to create empty task container
-//  * @param {string} id - This is the task status, where the container should be build
-//  * @returns HTML code of empty task container
-//  */
-// function createOnDragTask(id) {
-//     return `<div class="onDrag dNone" id="onDragTask${id}"></div>`;
-// }
-
-
-
 /* --Drag'N Drop Funktionen-- */
 
 
@@ -155,7 +126,7 @@ function allowDrop(ev) {        // diese Funktion verändert das Standartverhalt
 
 // Drag'N Drop Hauptfunktion: Ist für die Zuweisung der neuen Category im Array-Tasks[] zuständig
 function moveTo(category) {
-    let index = tasks.findIndex((draggedElement) => draggedElement.id == currentDraggedElement);    // das Hauptarray tasks wird per findindex Methode durchsucht, die dortige Objekt.id wird mit dem currentDraggedElement abgeglichen, zwecks Zuordnung des Objekts. Auf diese Weise kann nachfolgend im tasks[index] die 'category' neu definiert werden. Voilà! Drag'N Drop 'category' wurde neu zugewiesen. Hauptfunktion moveTo hat ihren Auftrag ausgeführt. Mission accomplished.
+    let index = tasks.findIndex((draggedElement) => draggedElement.id == currentDraggedElement);
     tasks[index]['category'] = category; // z.B. das Array tasks[{}]-Objekt mit ID 1: Das Feld 'category' ändert sich zu 'TASKS_inProgress' oder 'TASKS_todo'
     saveTask();
     updateHTML();
@@ -183,7 +154,6 @@ function updateHTML() {            // diese Renderfunktion filtert die Objekte d
         // console.log(open);
         document.getElementById('TASKS_todo').innerHTML += templatePostit(element, i); renderPostit_Assignees(element, i);
         
-        // document.getElementById(`postIt_Labels${i}`).style.backgroundColor = tasks[i]['labelColor'];
     }
 
 
@@ -194,8 +164,7 @@ function updateHTML() {            // diese Renderfunktion filtert die Objekte d
     for (let i = 0; i < TASKS_inProgress.length; i++) {
         const element = TASKS_inProgress[i];
         document.getElementById('TASKS_inProgress').innerHTML += templatePostit(element, i); renderPostit_Assignees(element, i);
-    
-        // document.getElementById(`postIt_Labels${i}`).style.backgroundColor = tasks[i]['labelColor'];
+
     }
 
 
@@ -206,8 +175,7 @@ function updateHTML() {            // diese Renderfunktion filtert die Objekte d
     for (let i = 0; i < TASKS_awaitingFeedback.length; i++) {
         const element = TASKS_awaitingFeedback[i];
         document.getElementById('TASKS_awaitingFeedback').innerHTML += templatePostit(element, i); renderPostit_Assignees(element, i);
-    
-        // document.getElementById(`postIt_Labels${i}`).style.backgroundColor = tasks[i]['labelColor'];
+
     }
 
 
@@ -218,12 +186,11 @@ function updateHTML() {            // diese Renderfunktion filtert die Objekte d
     for (let i = 0; i < TASKS_done.length; i++) {
         const element = TASKS_done[i];
         document.getElementById('TASKS_done').innerHTML += templatePostit(element, i); renderPostit_Assignees(element, i);
-    
-        // document.getElementById(`postIt_Labels${i}`).style.backgroundColor = tasks[i]['labelColor'];
+
     }
     
 }
-// style="background-color: ${element['labelColor']}
+
 
 function templatePostit(element,i) {
     return `

@@ -1,14 +1,14 @@
 let currentUser = [];
 let currentUserName = [];
 
-setURL('https://gruppe-08i.developerakademie.net/smallest_backend_ever');
+setURL('http://join.orhan-kacar.com/smallest_backend_ever');
 
 async function init() {
     await downloadFromServer();
     users = JSON.parse(backend.getItem('users')) || [];
     messageBoxAnimation();
     rememberMe();
-    
+    console.log('login.js wurde ausgeführt');
 }
 
 function messageBoxAnimation(){
@@ -110,9 +110,3 @@ function showPassword(){
         lock.style.display = "block";
     }
 }
-
-
-
-
-
-

@@ -1,5 +1,5 @@
 let users  = [];
-setURL('https://gruppe-08i.developerakademie.net/smallest_backend_ever');
+setURL('http://join.orhan-kacar.com/smallest_backend_ever');
 
 let newID = 0;
 

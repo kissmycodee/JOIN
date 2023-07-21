@@ -5,18 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <script src="assets/templates/Navbar.js"></script>
+    <script src="js/Navbar.js"></script>
     <link rel="stylesheet" href="assets/fonts/fonts.css">
     <!-- <link rel="stylesheet" href="style.css"> -->
-    <link rel="stylesheet" href="contact.css">
-    <link rel="stylesheet" href="contact_bg_colors.css">
-    <link rel="stylesheet" href="contact_popup.css">
-    <link rel="stylesheet" href="contact_edit.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/contact_bg_colors.css">
+    <link rel="stylesheet" href="css/contact_popup.css">
+    <link rel="stylesheet" href="css/contact_edit.css">
     <link rel="icon" type="icon" href="assets/img/logo_light.png">
 
     <!-- <script src="script.js"></script> -->
-    <script src="mini_backend/mini_backend.js"></script>
-    <script src="contact.js"></script>
+    <script src="js/mini_backend.js"></script>
+    <script src="js/contact.js"></script>
 
     <title>JOIN | Contacts</title>
     
@@ -34,7 +34,7 @@
                 </div>
             </div>
             
-            <div class="contact-selectionn" id="contact-selectionn">
+            <div class="contact-selectionn contact-header" id="contact-selectionn">
                 <!-- contact.js generate only one contact if press in list -->
             </div>
             
@@ -42,33 +42,26 @@
             <div class="contact-content">
                 <div class="contact-header">
                     <span class="contact-header-name">Contacts</span>
-                    <div class="contact-line"></div>
-                    <span class="contact-header-description">Better with a team</span>
-                </div>
-
-                
+                    <div class="contact-header-description">
+                        <div class="contact-line"> </div>
+                        <span>Better with a team</span>
+                    </div>
+                </div>     
 
                 <div class="contact-selection" id="contact-selection">
                     <!-- contact.js generate only one contact if press in list -->
                 </div> 
-                 
-                   
-
-                
-
+                                 
             </div>
+
             <div class="succesfulC" id="succesfulC" >Contact succesfully created </div>
 
-                <button class="button" id="openBtn" onclick="slideIn()">New contact
-                    <img src="assets/img/icons-add-contact.svg" alt="">
-                </button>
-                <button class="buttonn" id="openBtnn" onclick="slideIn()">New contact
-                    <img src="assets/img/icons-add-contact.svg" alt="">
-                </button>
-
-
-
-
+            <button class="button" id="openBtn" onclick="slideIn()">New contact
+                <img src="assets/img/icons-add-contact.svg" alt="">
+            </button>
+            <button class="buttonn" id="openBtnn" onclick="slideIn()">New contact
+                <img src="assets/img/icons-add-contact.svg" alt="">
+            </button>
 
         </div>
         
