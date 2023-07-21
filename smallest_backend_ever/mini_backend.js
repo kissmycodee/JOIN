@@ -29,6 +29,7 @@ async function downloadFromServer() {
 
 function setURL(url) {
     BASE_SERVER_URL = url;
+    console.log('SetURL der Mini_Bakend.JS wurde ausgeführt');
 }
 
 /**
